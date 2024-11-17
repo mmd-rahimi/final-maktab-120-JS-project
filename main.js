@@ -10,4 +10,4 @@ import "./style.css";
 
 
 const main = document.getElementById("shop");
-main.append(login1());
+main.append(ob2());

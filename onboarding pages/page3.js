@@ -2,7 +2,7 @@ import { El } from "../EL/createElement";
 
 export function ob3(){
     
-    const bg = El({element:"div", className:"h-[60%] w-[100%] bg-green-300", children:[]})
+    const bg = El({element:"img",src:"./images/p3-bg.jfif", className:"flex justify-start items-start w-[40rem] h-[30rem]", children:[]})
 
     const para = El({element:"p", className:"text-4xl", children:["We provide high quality products just for you"]});
 
@@ -20,7 +20,7 @@ export function ob3(){
 
     return El({
         element:"div",
-        className:"flex flex-col gap-16 justify-center items-center mt-[30%]",
+        className:"flex flex-col gap-16 justify-center items-center",
         children:[bg, para, borders, btn]
     })
 }
