@@ -8,21 +8,22 @@
     "dev": "vite",
     "preview": "vite preview"
   },
-"devDependencies": {
-  "autoprefixer": "^10.4.20",
-  "postcss": "^8.4.47",
-  "tailwindcss": "^3.4.14",
-  "vite": "^5.4.9"
-},
-"keywords": [
-  "server",
-  "shopserver",
-  "shoesShop",
-  "json-server"
-],
-"author": "aliziaeijazi@gmail.com",
-"license": "MIT",
-"dependencies": {
-  "json-server": "^1.0.0-beta.3"
-}
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "vite": "^5.4.9"
+  },
+  "keywords": [
+    "server",
+    "shopserver",
+    "shoesShop",
+    "json-server"
+  ],
+  "author": "aliziaeijazi@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3",
+    "navigo": "^8.11.1"
+  }
 }
