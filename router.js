@@ -5,6 +5,7 @@ import { ob2 } from "./src/pages/onboarding pages/page2";
 import { ob3 } from "./src/pages/onboarding pages/page3";
 import { ob4 } from "./src/pages/onboarding pages/page4";
 import { ob5 } from "./src/pages/onboarding pages/page5";
+import { homePage } from "./src/pages/Home page/homePage";
 
 
 export const router = new Navigo("/");
@@ -32,5 +33,9 @@ router
   })
   .on("/login", () => {
     changePage(login1)
+  })  
+  .on("/home", () => {
+    changePage(homePage)
   })
+
 
