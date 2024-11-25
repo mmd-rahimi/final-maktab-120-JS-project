@@ -16,8 +16,8 @@ export function login1(){
          className:"flex items-center justify-center",
           children:[logo]})
     const header = El({element:"p", className:"flex items-center justify-center mt-[2rem]", children:["Login to Your Account"]})
-    const input1 = El({id:"email", element:"input", className:"flex w-[90%] h-[1rem] items-start bg-slate-100 border-gray-500 border-2 rounded-lg p-4  placeholder-gray-400",placeholder:'Email', children:[""]})
-    const input2 = El({id:"password", element:"input", className:"flex w-[90%] h-[1rem] items-start bg-slate-100 border-gray-500 border-2 rounded-lg p-4  placeholder-gray-400",placeholder:'Password', children:[""]})
+    const input1 = El({id:"email", type:"email",element:"input", className:"flex w-[90%] h-[1rem] items-start bg-slate-100 border-gray-500 border-2 rounded-lg p-4  placeholder-gray-400",placeholder:'Email', children:[""]})
+    const input2 = El({id:"password", type:"password", element:"input", className:"flex w-[90%] h-[1rem] items-start bg-slate-100 border-gray-500 border-2 rounded-lg p-4  placeholder-gray-400",placeholder:'Password', children:[""]})
     const inputs = El({
         element:"div",
          className:"flex gap-4 flex-col items-center justify-center mt-[3rem]",
