@@ -2,9 +2,9 @@
   "users": [
     {
       "id": 1,
-      "name": "ali",
-      "email": "Your Email",
-      "password": "Your Password",
+      "name": "mmd",
+      "email": "mmd@gmail.com",
+      "password": "mmd",
       "cart": [],
       "orders": [],
       "wishlist": []
