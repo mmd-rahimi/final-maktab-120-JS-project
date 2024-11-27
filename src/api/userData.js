@@ -10,4 +10,3 @@ export const userData = async (userid) => {
     console.error(error);
   }
 };
-export default userData;

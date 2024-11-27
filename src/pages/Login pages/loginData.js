@@ -81,5 +81,3 @@ autoLogin();
 // };
 
 // autoLogin();
-
-export default loginData;
