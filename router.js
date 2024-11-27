@@ -1,5 +1,5 @@
 import Navigo from "navigo";
-import { login1 } from "./src/pages/Login pages/Login page";
+import { login } from "./src/pages/Login pages/Login page";
 import { ob1 } from "./src/pages/onboarding pages/page1";
 import { ob2 } from "./src/pages/onboarding pages/page2";
 import { ob3 } from "./src/pages/onboarding pages/page3";
@@ -32,7 +32,7 @@ router
     changePage(ob5);
   })
   .on("/login", () => {
-    changePage(login1)
+    changePage(login)
   })  
   .on("/home", () => {
     changePage(homePage)

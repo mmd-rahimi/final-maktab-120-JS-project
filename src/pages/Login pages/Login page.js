@@ -1,46 +1,83 @@
-import { El } from "../../EL/createElement"
+import { El } from "../../EL/createElement";
 import { loginData } from "./loginData"
 
 
-export function login1(){
-    const backBtn = El({element:"img",src:"./images/turn back logo.png", className:"w-4", children:[]})
-    const backBtnDiv = El({
-        element:"a",
-        href:"/swiper1",
-        className:"inline-flex mx-8 my-6",
-        children:[backBtn]
-    })
-    const logo = El({element:"img", src:"./images/main logo.png", className:"w-6", children:[]})
-    const logoDiv = El({
-        element:"div",
-         className:"flex items-center justify-center",
-          children:[logo]})
-    const header = El({element:"p", className:"flex items-center justify-center mt-[2rem]", children:["Login to Your Account"]})
-    const input1 = El({id:"email", type:"email",element:"input", className:"flex w-[90%] h-[1rem] items-start bg-slate-100 border-gray-500 border-2 rounded-lg p-4  placeholder-gray-400",placeholder:'Email', children:[""]})
-    const input2 = El({id:"password", type:"password", element:"input", className:"flex w-[90%] h-[1rem] items-start bg-slate-100 border-gray-500 border-2 rounded-lg p-4  placeholder-gray-400",placeholder:'Password', children:[""]})
-    const inputs = El({
-        element:"div",
-         className:"flex gap-4 flex-col items-center justify-center mt-[3rem]",
-          children:[input1, input2]
-    })
-    const checkBox = El({id:"rememberMe", element:"input",type:"checkbox", className:"", children:[]})
-    const para = El({element:"lable", className:"text-sm", children:["Remember me"]})
-    const rememberMe = El({
-        element:"div",
-        className:"flex gap-1 justify-center items-center mt-[2rem]",
-         children:[checkBox, para]
-    })
-    const btn = El({element:"button", className:"w-[90%] h-[2.5rem] mt-[5rem] text-white bg-[#212529] flex items-center justify-center rounded-3xl", children:["Sign in"],
-        onsubmit: (event) => {
-            loginData(event)}
-    })
-    const btnDiv = El({element:"div", className:"flex justify-center items-center", children:[btn]})
-
-    return El ({
-        element:"div",
-        className:" w-[320px] h-[480px]",
-         children:[backBtnDiv, logoDiv, header, inputs, rememberMe, btnDiv],
-         onsubmit: (event) => {
-            loginData(event);}
+export const login = () => {
+    return El({
+      element: "div",
+      id: "login-page",
+      className:
+        "w-[320px] h-[480px] mx-auto border border-black bg-gray-100 flex flex-col items-center overflow-x-hidden overflow-y-hidden",
+      children: [
+        El({
+          element: "img",
+          id: "login-image",
+          className: "mt-[132px] h-[81px] w-[54px]",
+          src: "./icons/logo.png",
+        }),
+        El({
+          element: "p",
+          className:
+            "text-center mt-[118px] font-[700] text-[32px] w-[342px] h-[39px]",
+          children: ["Login to Your Account"],
+        }),
+        El({
+          element: "form",
+          id: "login-form",
+          className:
+            "p-4 mt-[48px] w-full flex flex-col items-center justify-center gap-[20px]",
+          children: [
+            El({
+              element: "input",
+              type: "email",
+              name: "email",
+              placeholder: " Email",
+              id: "login-email",
+              className: "border-none h-[40px] rounded-lg bg-gray-300 w-full",
+            }),
+            El({
+              element: "input",
+              type: "password",
+              name: "password",
+              placeholder: " Password",
+              id: "login-password",
+              className: "border-none h-[40px] rounded-lg bg-gray-300 w-full",
+            }),
+            El({
+              element: "label",
+              className:
+                "text-[16px] mt-[19px] w-full flex flex-col justify-center gap-[10px]",
+              children: [
+                "Remember Me",
+                El({
+                  element: "input",
+                  type: "checkbox",
+                  name: "rememberMe",
+                  id: "remember-me-checkbox",
+                  className:
+                    "border-2 border-gray-600 rounded-sm w-[16px] h-[16px] bg-gray-100 mr-2",
+                }),
+                El({
+                  element: "button",
+                  type: "submit",
+                  className:
+                    "border-none h-[27px] rounded-full bg-black w-[380px] text-white",
+                  children: "Sign In",
+                }),
+              ],
+            }),
+            El({
+              element: "p",
+              id: "error-message",
+              className: "text-red-500 mt-4 text-center hidden",
+              children: ["Invalid email or password"],
+            }),
+          ],
+          onsubmit: (event) => {
+            loginData(event);
+          },
+        }),
+      ],
     });
-}
+  };
+    
