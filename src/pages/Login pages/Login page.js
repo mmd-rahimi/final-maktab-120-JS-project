@@ -64,6 +64,17 @@ export const login = () => {
                                 className:""
                             })
                         ]
+                    }),
+                    El({
+                      element:"div",
+                      className:"flex-flex justify-center items-center",
+                      children:[
+                        El({
+                          element:"button",
+                          className:"w-[18rem] bg-black text-white rounded-2xl",
+                          children:["Sign in"]
+                        })
+                      ]
                     })
                 ]
             }),
