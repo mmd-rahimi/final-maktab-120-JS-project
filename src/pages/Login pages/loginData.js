@@ -41,7 +41,7 @@ const autoLogin = () => {
   const password = localStorage.getItem("password");
 
   if (email && password) {
-    fetch(`${Url}/users`)
+    fetch(`${url}/users`)
       .then((res) => res.json())
       .then((users) => {
         const user = users.find(
@@ -60,24 +60,3 @@ const autoLogin = () => {
   }
 };
 autoLogin();
-
-// const autoLogin = async () => {
-//   const email = localStorage.getItem("email");
-//   const password = localStorage.getItem("password");
-
-//   if (email && password) {
-//     const response = await fetch("http://localhost:4000/users");
-//     const users = await response.json();
-
-//     const user = users.find((user) => user.email === email);
-
-//     if (user) {
-//       router.navigate("/home"); // Successfully logged in
-//     } else {
-//       localStorage.removeItem("email");
-//       localStorage.removeItem("password");
-//     }
-//   }
-// };
-
-// autoLogin();

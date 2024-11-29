@@ -39,7 +39,7 @@ export const login = () => {
               name: "email",
               placeholder: " Email",
               id: "login-email",
-              className: "border-none h-[40px] rounded-lg bg-gray-300 w-full",
+              className: "border-none h-[40px] rounded-lg bg-gray-300 w-full p-2",
             }),
             El({
               element: "input",
@@ -47,42 +47,36 @@ export const login = () => {
               name: "password",
               placeholder: " Password",
               id: "login-password",
-              className: "border-none h-[40px] rounded-lg bg-gray-300 w-full",
+              className: "border-none h-[40px] rounded-lg bg-gray-300 w-full p-2",
             }),
             El({
-                element:"div",
-                className:"flex flex-col gap-6 mt-4 justify-center",
-                children:[
-                    El({
-                        element:"div",
-                        className:"flex flex-row gap-2",
-                        children:[
-                            El({
-                                element:"input",
-                                type:"checkbox",
-                                children:[],
-                                className:""
-                            })
-                        ]
-                    }),
-                    El({
-                      element:"div",
-                      className:"flex-flex justify-center items-center",
-                      children:[
-                        El({
-                          element:"button",
-                          className:"w-[18rem] bg-black text-white rounded-2xl",
-                          children:["Sign in"]
-                        })
-                      ]
-                    })
-                ]
+              element: "label",
+              className:
+                "text-[16px] w-full flex flex-col justify-center gap-[10px]",
+              children: [
+                "Remember Me",
+                El({
+                  element: "input",
+                  type: "checkbox",
+                  name: "rememberMe",
+                  id: "remember-me-checkbox",
+                  className:
+                    "border-2 border-gray-600 rounded-sm w-[16px] h-[16px] bg-gray-100 mr-2",
+                }),
+                El({
+                  element: "button",
+                  type: "submit",
+                  className:
+                    "border-none h-[27px] rounded-full bg-black w-[18rem] text-white",
+                  children: "Sign In",
+                }),
+              ],
             }),
             El({
               element: "p",
               id: "error-message",
-              className: "text-red-500 mt-4 text-center hidden",
-              children: ["Invalid email or password"],
+              className: "text-red-500 text-center hidden",
+              children: ["incorrect"],
             }),
           ],
           onsubmit: (event) => {
