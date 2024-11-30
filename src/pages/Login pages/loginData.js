@@ -4,7 +4,6 @@ import { router } from "../../../router";
 export const loginData = async (event) => {
   event.preventDefault();
 
-  //   dom
   const email = document.getElementById("login-email").value;
   const password = document.getElementById("login-password").value;
   const rememberMe = document.getElementById("remember-me-checkbox").checked;
@@ -24,7 +23,7 @@ export const loginData = async (event) => {
         localStorage.removeItem("password");
       }
 
-      // Navigate to home if successful login
+      // Router
       if (router && router.navigate) {
         router.navigate("/home");
       }
@@ -48,7 +47,7 @@ const autoLogin = () => {
           (user) => user.email === email && user.password === password
         );
         if (user) {
-          router.navigate("/home"); // Successfully logged in
+          router.navigate("/home");
         } else {
           localStorage.removeItem("email");
           localStorage.removeItem("password");

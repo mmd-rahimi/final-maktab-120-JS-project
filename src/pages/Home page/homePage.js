@@ -1,5 +1,7 @@
 import { router } from "../../../router";
+import products from "../../api/products";
 import { El } from "../../EL/createElement";
+
 
 export function homePage () {
     // Header of home page
