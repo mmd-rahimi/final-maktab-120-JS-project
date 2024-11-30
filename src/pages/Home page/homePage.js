@@ -1,6 +1,7 @@
 import { router } from "../../../router";
 import products from "../../api/products";
 import { El } from "../../EL/createElement";
+import { homePageFooter } from "./homePageFooter";
 
 
 export function homePage () {
@@ -39,6 +40,6 @@ export function homePage () {
 
     return El({element:"div",
         className:"w-[320px] h-[480px] p-2 flex flex-col",
-        children:[header, searchBar, brandlogos, seeAllFlex]
+        children:[header, searchBar, brandlogos, seeAllFlex,]
     })
 }
